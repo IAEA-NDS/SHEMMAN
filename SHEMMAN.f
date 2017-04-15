@@ -414,7 +414,8 @@ C     *****************************************************************
 
       DO I=NRL,NV
             DO J=NRL,NV
-                IF (J.NE.I)  COR(I,J)=COV(I,J)/DSQRT(COV(J,J)*COV(I,I))
+                !IF (J.NE.I)  
+                COR(I,J)=COV(I,J)/DSQRT(COV(J,J)*COV(I,I))
             END DO
       END DO
       
@@ -432,7 +433,7 @@ C     *****************************************************************
       
       DO I=NRL,NV
           WRITE(21,"(E10.3,A5,E10.2,A10,E12.4)") X(I),'+/-',
-     *     DSQRT(COV(I,I)), '; Corr=', 999
+     *     DSQRT(COV(I,I)), '; Corr=', 1-1/(Z(I,I)*COV(I,I))
           PRINT "(E10.3,A5,E10.2,A10,F10.2)", X(I),'+/-',
      *     DSQRT(COV(I,I)), '; Corr=', 1-1/(Z(I,I)*COV(I,I))
       END DO 
