@@ -449,7 +449,7 @@ C     *****************************************************************
       COMMON/FUDN/Y,DN,ANU,DNV,CDV
       C1=1.41421356237
       PI3=1.0471975512 
-      !IF (MEHAM.EQ.5.OR.MEHAM.EQ.7) GO TO 2
+      IF (MEHAM.EQ.5.OR.MEHAM.EQ.7) GO TO 2
       AMOO=AMO
       BMOO=BMO
       CMOO=CMO
