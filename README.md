@@ -5,7 +5,7 @@ Hamiltonian parameters can be fitted using experimental level energies.
 
 ## Usage
 
-'shemman inputfile outputfile'
+`shemman inputfile outputfile`
 
 
 ## Manuals
